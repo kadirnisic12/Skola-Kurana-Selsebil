@@ -1283,42 +1283,34 @@
       }
     }
 
-    @media (max-width: 600px) {
+    @media(max-width:600px) {
       section {
-        padding: 60px 5%
+        padding: 3.5rem 1.2rem
       }
 
-      .hero h1 {
-        font-size: 2.2rem
+      .k-grid {
+        grid-template-columns: 1fr
       }
 
-      /* Ovo je ključni dio za 2x2 prikaz */
+      .f-grid {
+        grid-template-columns: 1fr
+      }
+
       .stats {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Pravi dvije kolone */
-        padding: 20px;
-        margin-top: -40px;
+        flex-direction: column
       }
 
       .stat {
-        border-right: 1px solid var(--bl);
-        border-bottom: 1px solid var(--bl);
-        padding: 20px 10px;
-        max-width: 100%;
-      }
-
-      /* Briše desnu liniju na 2. i 4. elementu */
-      .stat:nth-child(even) {
         border-right: none;
+        border-bottom: 1px solid var(--bl)
       }
 
-      /* Briše donju liniju na 3. i 4. elementu (zadnji red) */
-      .stat:nth-last-child(-n+2) {
-        border-bottom: none;
+      .stat:last-child {
+        border-bottom: none
       }
 
-      .stat h3 {
-        font-size: 1.8rem;
+      .vals {
+        grid-template-columns: 1fr
       }
     }
   </style>
